@@ -94,9 +94,29 @@ num.sort((a, b) => b - a);
 console.log(num);
 
 // 17
+/* let a = [1, 2, 3];
+let b = [4, 5, 6];
+let c = a.concat(b);
+console.log(c); */
 
 // 18
+/* let a = ["My", "has", "many", "open"];
+let b = ["brain", "to", "tabs", "!"];
+
+let mixedArray = [];
+for (let i = 0; i < a.length; i++) {
+  mixedArray.push(a[i]);
+  mixedArray.push(b[i]);
+}
+console.log(mixedArray); */
 
 // 19
+let a = [1, 2, 7, 8, 9, 10];
+let b = [3, 4, 5, 6];
+a.splice(2, 0, ...b);
+console.log(a);
 
 // 20
+let names = ["sixten", "Eva", "Ali", "Kim", "Greger", "Alicia"];
+let upperCaseNames = names.map((name) => name.toUpperCase());
+console.log(upperCaseNames);
