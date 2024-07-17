@@ -117,6 +117,26 @@ a.splice(2, 0, ...b);
 console.log(a);
 
 // 20
-let names = ["sixten", "Eva", "Ali", "Kim", "Greger", "Alicia"];
+/* let names = ["sixten", "Eva", "Ali", "Kim", "Greger", "Alicia"];
 let upperCaseNames = names.map((name) => name.toUpperCase());
-console.log(upperCaseNames);
+console.log(upperCaseNames); */
+
+// 21
+/* let names = [
+  { name: "sixten", age: 32 },
+  { name: "Eva", age: 19 },
+  { name: "Ali", age: 67 },
+  { name: "Kim", age: 13 },
+  { name: "Greger", age: 30 },
+  { name: "Alicia", age: 82 },
+];
+
+let filteredPeople = names.filter((person) => person.age < 30);
+console.log(filteredPeople); */
+
+// 22
+let names = ["sixten", "Eva", "Ali", "Kim", "Greger", "Alicia"];
+
+let containsEwa = names.includes("Ewa");
+console.log(containsEwa);
+// prints out false
