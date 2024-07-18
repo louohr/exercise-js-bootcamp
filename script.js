@@ -79,14 +79,14 @@ frukter.splice(2, 0, nyFrukt);
 console.log(frukter);
 
 // 15
-let fruits = ["apple", "orange", "pear", "kiwi"];
+/* let fruits = ["apple", "orange", "pear", "kiwi"];
 let clonedFruits = fruits.slice();
 let pineappleIndex = clonedFruits.indexOf("pineapple");
 if (pineappleIndex !== -1) {
   clonedFruits.splice(pineappleIndex, 0, "apple");
 }
 
-console.log(clonedFruits);
+console.log(clonedFruits); */
 
 // 16
 let num = [1, 5, 78, 7, 122, 3, 4, 65, 40, 2, 8];
@@ -140,3 +140,21 @@ let names = ["sixten", "Eva", "Ali", "Kim", "Greger", "Alicia"];
 let containsEwa = names.includes("Ewa");
 console.log(containsEwa);
 // prints out false
+
+// 23
+/* for (let i = 0; i < 1000; i++) {
+  console.log("Du är på varv " + i);
+}
+ */
+
+// 24
+for (let i = 100; i >= 0; i--) {
+  console.log("You are on the turn " + i);
+}
+
+// 25
+let fruits = ["apple", "orange", "pear", "kiwi", "pineapple"];
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
