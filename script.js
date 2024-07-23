@@ -177,3 +177,46 @@ suits.forEach((suit) => {
 });
 
 console.log(deck);
+
+// 28
+let book = {
+  title: "Odysseus",
+  author: "James Joyce",
+  genres: "Drama",
+  ratings: [1, 2, 3, 4, 5],
+};
+
+// 29
+let person = {
+  name: "Sixten Faceplant",
+  email: "sixten.faceplant@zocom.se",
+  role: "ninjah",
+  adress: {
+    street: "Karatevägen 3",
+    zip: "41477",
+    city: "Kablam City",
+  },
+};
+
+console.log(person.adress.city);
+
+// 30
+// Three methods to clone
+/* // Spread Method
+let clone = { ...userDetails }
+
+// Object.assign() Method
+let clone = Object.assign({}, userDetails)
+
+// JSON.parse() Method
+let clone = JSON.parse(JSON.stringify(userDetails)) */
+
+const userDetails = {
+  name: "Bob",
+  ocupation: "Builder",
+  age: 35,
+};
+
+let cloneUser = { ...userDetails };
+
+console.log(cloneUser);
