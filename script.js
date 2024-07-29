@@ -140,10 +140,10 @@ let filteredPeople = names.filter((person) => person.age < 30);
 console.log(filteredPeople); */
 
 // 22
-let names = ["sixten", "Eva", "Ali", "Kim", "Greger", "Alicia"];
+/* let names = ["sixten", "Eva", "Ali", "Kim", "Greger", "Alicia"];
 
 let containsEwa = names.includes("Ewa");
-console.log(containsEwa);
+console.log(containsEwa); */
 // prints out false
 
 // Loops
@@ -252,3 +252,223 @@ let person = {
 for (let key in person) {
   console.log(`${key} - ${person[key]}`);
 }
+
+// Functions
+
+// 33
+function add(x, y) {
+  return x + y;
+}
+
+// Example usage
+const result = add(5, 3);
+console.log(result);
+
+// 34
+const explainDifference = function () {
+  return "A named function has a specific name identifier and can be called by that name throughout the code. An anonymous function does not have a name and is often used as a function expression or passed as an argument to other functions.";
+};
+
+// Example usage
+console.log(explainDifference());
+
+// 35
+function getYear(dateString) {
+  // Check if the input string is exactly 10 characters long and follows the 'YYYY-MM-DD' format
+  if (dateString.length === 10 && dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    // Extract and return the year part from the date string
+    return dateString.slice(0, 4);
+  } else {
+    throw new Error("Invalid date format. Please use 'YYYY-MM-DD'.");
+  }
+}
+
+// Example usage
+console.log(getYear("2019-10-14"));
+
+// 36
+function calcThis(num1, num2, operator) {
+  switch (operator) {
+    case "+":
+      return num1 + num2;
+    case "-":
+      return num1 - num2;
+    case "*":
+      return num1 * num2;
+    case "/":
+      if (num2 !== 0) {
+        return num1 / num2;
+      } else {
+        throw new Error("Divided by zero is not allowed.");
+      }
+    default:
+      throw new Error("Invalid operator. Please use '+', '-', '*', or '/'");
+  }
+}
+
+console.log(calcThis(1, 2, "+")); // Output: 3
+console.log(calcThis(1, 2, "-")); // Output:-1
+console.log(calcThis(1, 2, "*")); // Output: 2
+console.log(calcThis(1, 2, "/")); // Output: 2
+
+// Conditionals
+
+// 37
+function comapareThis(num1, num2) {
+  return num1 === num2;
+}
+
+// Example usage:
+console.log(comapareThis(1, 1));
+console.log(comapareThis(3, 1));
+
+// 38
+function between(num) {
+  return num >= 20 && num <= 40;
+}
+
+// Example usage:
+console.log(between(30)); // Output: true
+console.log(between(50)); // Output: false
+console.log(between(20)); // Output: true
+console.log(between(40)); // Output: true
+console.log(between(19)); // Output: false
+console.log(between(41)); // Output: false
+
+// 39
+function getMeTheLongestArr(arr1, arr2) {
+  // Compare the lengths of the two arrays and return the longer one
+  if (arr1.length >= arr2.length) {
+    return arr1;
+  } else {
+    return arr2;
+  }
+}
+
+// Example usage;
+console.log(getMeTheLongestArr([1, 2], ["A", "B", "C"])); // Output: ['A', 'B', 'C']
+console.log(getMeTheLongestArr(["X", "Y"], ["A", "B"])); // Output: ['X', 'Y']
+console.log(getMeTheLongestArr([], [1, 2, 3])); // Output: [1, 2, 3]
+
+// Math objects
+// 40
+const number = 1337.51;
+const roundedDown = Math.floor(number);
+
+console.log(roundedDown); // Output: 1337
+
+// 41
+const number2 = 1337.48;
+const roundedUp = Math.floor(number);
+
+console.log(roundedUp); // Output: 1337
+
+// 42
+const number3 = 1337.497;
+const rounded = Math.round(number);
+
+console.log(rounded); // Output: 1338
+
+// 43
+function random(max) {
+  return Math.floor(Math.random() * max);
+}
+
+// Example usage:
+console.log(random(1000)); // Outputs a random integer between 0 and 1000
+
+// 44
+function randomPassword(n) {
+  // Define the characters to choose from
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  let password = "";
+
+  // Generate a random password of length n
+  for (let i = 0; i < n; i++) {
+    // Get a random index
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    password += characters[randomIndex];
+  }
+  return password;
+}
+
+// Example usage:
+console.log(randomPassword(7));
+
+// 45
+function randomName(names) {
+  // Generate a random index based on the length of an array
+  const randomIndex = Math.floor(Math.random() * names.length);
+  // Return the name at the randomly generated index
+  return names[randomIndex];
+}
+
+// Example usage:
+const names = ["sixten", "Eva", "Ali", "Kim", "Greger", "Alicia"];
+console.log(randomName(names)); // Outputs a random name from the array
+
+// Program Flow
+// 46
+/* let getData = function (url) {};
+function getData() {}
+
+// function expression and function declaration
+// Function Declaration - can be called before it's defined
+console.log(declaredFunction()); // Output: 'Hello'
+function declaredFunction() {
+  return "Hello";
+}
+
+// Function Expression - cannot be called before it's defined
+console.log(expressionFunction()); // Throws TypeError: expressionFunction is not a function
+let expressionFunction = function () {
+  return "World";
+}; */
+
+// 47
+// Execute
+HelloAgainAgain();
+
+function hello() {
+  console.log("Hello!");
+}
+
+function helloAgain() {
+  console.log("Hello Again!");
+  hello();
+}
+
+function HelloAgainAgain() {
+  console.log("Hello Again Again!");
+  helloAgain();
+}
+
+//Output will be:
+/* Hello Again Again!
+Hello Again!
+Hello! */
+
+// 48
+
+// right flow
+let pokemons = ["Pikachu", "Charmander", "Bulbasaur", "Squirtle"];
+function printPokemons() {}
+for (let i = 0; i <= pokemons.length; i++) {}
+console.log("One awesome pokemon is " + pokemons[i]);
+printPokemons();
+
+// 49
+function reverseString(str) {
+  let newString = ""; // Initialize an empty string to store the reversed string
+  let i = str.length - 1; // Start from the last character of the input string
+
+  // Loop through the string backwards
+  for (; i >= 0; i--) {
+    newString += str[i]; // Append each character to newString
+  }
+
+  return newString; // Return the reversed string
+}
+
+// Example usage:
+console.log(reverseString("hello")); // Output: 'olleh'
