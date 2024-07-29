@@ -1,4 +1,5 @@
 // Syntax n stuff
+// Datatyper
 
 // 1
 let datatypes = ["String", "Number", "Boolean", "Object", "Undefined", "Null"];
@@ -19,6 +20,8 @@ if (a == b) // false */
 // 4
 // Hur tar man reda på vad en variabel har för datatyp?
 // Använda typeof operator
+
+// Block
 
 // 5
 /* [] // A 
@@ -41,6 +44,8 @@ var greeting = "Good bye world!"; // global variabel
 console.log(greeting); // globala variabeln greeting loggas till konsolen
 // var greeting kommer exekveras för att det är en global variabel.
 // let greeting existerar bara i kodblocket.
+
+// Strings
 
 // 8
 /* "Hello World" // A // Dubbelcitationstecken
@@ -141,6 +146,8 @@ let containsEwa = names.includes("Ewa");
 console.log(containsEwa);
 // prints out false
 
+// Loops
+
 // 23
 /* for (let i = 0; i < 1000; i++) {
   console.log("Du är på varv " + i);
@@ -178,6 +185,8 @@ suits.forEach((suit) => {
 
 console.log(deck);
 
+// Objects
+
 // 28
 let book = {
   title: "Odysseus",
@@ -187,7 +196,7 @@ let book = {
 };
 
 // 29
-let person = {
+/* let person = {
   name: "Sixten Faceplant",
   email: "sixten.faceplant@zocom.se",
   role: "ninjah",
@@ -198,7 +207,7 @@ let person = {
   },
 };
 
-console.log(person.adress.city);
+console.log(person.adress.city); */
 
 // 30
 // Three methods to clone
@@ -220,3 +229,26 @@ const userDetails = {
 let cloneUser = { ...userDetails };
 
 console.log(cloneUser);
+
+// 31
+let dog = {
+  name: "Buster",
+  breed: "Golden retriever",
+  bark: function () {
+    return `Woof, my name is ${this.name}!`; // this, to define this name and not another name
+  },
+};
+
+console.log(dog.bark());
+
+// 32
+let person = {
+  name: "sixten",
+  email: "sixten@zocom.se",
+  role: "ninjah",
+  age: 32,
+};
+
+for (let key in person) {
+  console.log(`${key} - ${person[key]}`);
+}
