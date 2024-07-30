@@ -451,14 +451,14 @@ Hello! */
 // 48
 
 // right flow
-let pokemons = ["Pikachu", "Charmander", "Bulbasaur", "Squirtle"];
+/* let pokemons = ["Pikachu", "Charmander", "Bulbasaur", "Squirtle"];
 function printPokemons() {}
 for (let i = 0; i <= pokemons.length; i++) {}
 console.log("One awesome pokemon is " + pokemons[i]);
-printPokemons();
+printPokemons(); */
 
 // 49
-function reverseString(str) {
+/* function reverseString(str) {
   let newString = ""; // Initialize an empty string to store the reversed string
   let i = str.length - 1; // Start from the last character of the input string
 
@@ -471,4 +471,78 @@ function reverseString(str) {
 }
 
 // Example usage:
-console.log(reverseString("hello")); // Output: 'olleh'
+console.log(reverseString("hello")); // Output: 'olleh' */
+
+// 50
+// pending: the promise has been created, and the asynchronous function it's associated with has not succeded or failed yet.
+// This is the state you promise is in when it's returned from a call to fetch(), and the request is still being made.
+// fulfilled: the asynchronous function has succeeded
+// rejected: the asynchronous function has failed
+
+// 51
+/* getData(url);
+then((data) => {
+  console.log(data);
+}).catch((error) => {
+  console.error("Error fetching data:", error);
+});
+ */
+
+// 52
+/* async function getData(url);
+then((data) => {
+  console.log(data);
+}).catch((error) => {
+  console.error("Error fetching data:", error);
+}); */
+
+// API-interaktion med fetch
+
+// 53
+/* const url = `https://api.chucknorris.io/jokes/random`;
+
+async function chuckMe(url) {
+  try {
+    let response = await fetch("https://api.chucknorris.io/jokes/random");
+    if (!response.ok) {
+      throw new Error(`HTTP error! status ${response.status}`);
+    }
+    let data = await response.json();
+    console.log(data.value);
+  } catch (error) {
+    console.log("Error fetching joke:", error);
+  }
+}
+
+chuckMe(url); */
+
+// 54
+const url = `https://jsonplaceholder.typicode.com/posts`;
+
+let data = {
+  id: 1,
+  joke: "How many ears does Spock have? - Three; Left, right and the final front ear.",
+  funny: true,
+};
+
+async function postJoke(url, data) {
+  try {
+    let response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    let responseData = await response.json();
+    console.log(responseData);
+  } catch (error) {
+    console.error("Error posting joke:", error);
+  }
+}
+
+postJoke(url, data);
