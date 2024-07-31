@@ -592,7 +592,7 @@ let liContent = liElement.textContent;
 console.log(liContent);
 
 // 58
-const liElements = document.querySelectorAll("ul > li");
+let liElements = document.querySelectorAll("ul > li");
 
 liElements.forEach((li) => {
   li.textContent = li.textContent.toUpperCase();
@@ -625,9 +625,34 @@ console.log("Selected text:", selectedText);
 
 // 61
 let image = document.getElementsByTagName("img");
+console.log(image);
+
+// 62
+function Checkbox() {
+  let checkbox = document.getElementById("gdpr-ok");
+  if (checkbox) {
+    console.log("Checkbox is checked");
+  } else {
+    console.log("Checkbox is not checked");
+  }
+}
+
+// 63
+let nav = document.getElementById("main-nav");
+nav.classList.add("show");
+
+// 64
+document.getElementById("home").classList.toggle("active");
+
+// 65
+let figure = document.getElementsByTagName("img");
+for (let i = 0; i < image.length; i++) {
+  image[i].classList.add("shadow");
+}
 
 // Create content
 // 66
-let h1 = document.createElement("h1");
+/* let h1 = document.createElement("h1");
 h1.innerHTML = "rubrik";
 h1.appendChild(h1);
+ */
