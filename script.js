@@ -620,3 +620,14 @@ let selectedText = selectElement.options[selectElement.selectedIndex].text;
 console.log("Selected value:", selectedValue);
 console.log("Selected text:", selectedText);
  */
+
+// Attributes
+
+// 61
+let image = document.getElementsByTagName("img");
+
+// Create content
+// 66
+let h1 = document.createElement("h1");
+h1.innerHTML = "rubrik";
+h1.appendChild(h1);
