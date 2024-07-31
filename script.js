@@ -530,7 +530,7 @@ async function postJoke(url, data) {
     let response = await fetch(url, {
       method: "POST",
       headers: {
-        "Content Type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     });
@@ -546,3 +546,77 @@ async function postJoke(url, data) {
 }
 
 postJoke(url, data);
+
+// 55 ?
+/* async function updateJoke(url, data) {
+  try {
+    let response = await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    let responseData = await response.json();
+    console.log(responseData);
+  } catch (error) {
+    console.error("Error posting joke:", error);
+  }
+}
+
+updateJoke(url, data); */
+
+// DOM manipulation
+
+// 56
+
+// The code is in the html file
+
+// Select the first h2 element
+let h2Element = document.querySelector("h2");
+
+// Get the contents of the h2 element
+let h2Content = h2Element.textContent;
+
+// Display the contents
+console.log(h2Content);
+
+// 57
+let liElement = document.querySelector("ul > li:nth-child(3)");
+let liContent = liElement.textContent;
+
+console.log(liContent);
+
+// 58
+const liElements = document.querySelectorAll("ul > li");
+
+liElements.forEach((li) => {
+  li.textContent = li.textContent.toUpperCase();
+});
+
+// Value from input
+// 59
+
+// Select the input element by its id
+let emailInput = document.getElementById("email");
+
+// Get the value of the input field
+let emailValue = emailInput.value;
+
+// Log the value to the console
+console.log(emailValue);
+
+// 60
+/* let selectElement = document.getElementById("option");
+
+let selectedValue = selectElement.value;
+
+let selectedText = selectElement.options[selectElement.selectedIndex].text;
+
+console.log("Selected value:", selectedValue);
+console.log("Selected text:", selectedText);
+ */
