@@ -517,7 +517,7 @@ async function chuckMe(url) {
 chuckMe(url); */
 
 // 54
-const url = `https://jsonplaceholder.typicode.com/posts`;
+/* const url = `https://jsonplaceholder.typicode.com/posts`;
 
 let data = {
   id: 1,
@@ -545,7 +545,7 @@ async function postJoke(url, data) {
   }
 }
 
-postJoke(url, data);
+postJoke(url, data); */
 
 // 55 ?
 /* async function updateJoke(url, data) {
@@ -656,3 +656,59 @@ for (let i = 0; i < image.length; i++) {
 h1.innerHTML = "rubrik";
 h1.appendChild(h1);
  */
+
+// 67
+const url = `https://api.chucknorris.io/jokes/random`;
+
+fetch(url)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+
+    const section = document.createElement("section");
+
+    const img = document.createElement("img");
+
+    const h2 = document.createElement("h2");
+
+    const a = document.createElement("a");
+    a.href = data.url;
+    a.textContent = "Link to the joke";
+
+    // append the tag
+    section.append(img, h2, a);
+
+    document.body.append(section);
+  })
+  .catch((error) => console.error("Error fetching data:", error));
+
+// Events
+// 68
+let button = document.getElementsByTagName("button")[0];
+button.addEventListener("click", function () {
+  console.log("go go go!");
+});
+
+// 69
+// get all li fruit items
+let listFruits = document.getElementsByTagName("li");
+
+// add click event to each li
+for (let i = 0; i < listFruits.length; i++) {
+  listFruits[i].addEventListener("click", function () {
+    alert("Jag älskar " + listFruits[i].textContent + "!!!");
+  });
+}
+
+// 70
+
+// input from password id
+let passwordInput = document.getElementById("password");
+
+// add keyup event to input
+passwordInput.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    // check pressed key enter
+    console.log(passwordInput.value);
+  }
+});
